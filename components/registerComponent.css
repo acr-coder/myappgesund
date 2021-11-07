@@ -1,11 +1,31 @@
 * {box-sizing: border-box; background-color: black;}
 
+.box{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.left-box{
+  display: flex;
+  flex: 30%;
+  align-items: center;
+  font-size: 50px;
+  padding: 10px;
+  color: #f1f1f1;
+  justify-content: center;
+  
+}
+.right-box{
+  flex: 70%;
+}
+
 /* Add padding to containers */
 .container {
   
   padding: 16px;
   color: white;
-  width: 50%;
+  width: 80%;
+  
 }
 
 /* Full-width input fields */
@@ -63,8 +83,3 @@ a {
   }
 } 
 
-.box{
-  display: flex;
-  align-items: center;
-  
-}

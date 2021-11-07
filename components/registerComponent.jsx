@@ -36,14 +36,17 @@ const RegisterComponent = () => {
   }
 
   return (
-    <>
-    
-    
+    <div className="box">
+      <div className="left-box">
+      <Image className="geslogo" src={gelogo} alt="logo" width={80} height={80} /> 
+        <h1 style={{marginLeft:"10px"}} >Gesund AI</h1>
+      </div>
+    <div className="right-box">
     <form onSubmit={handleSubmit}>
           <div className="container">
-      <div className="box">
-      <Image className="geslogo" src={gelogo} alt="logo" width={80} height={80} /> 
-      <h1>Register</h1>
+      <div>
+       
+      <h1 style={{textAlign:"center"}}>Register</h1>
         </div>    
     
     
@@ -69,7 +72,10 @@ const RegisterComponent = () => {
   </div>
       
     </form>
-    </>
+    </div>
+    
+   
+    </div>
   )
 }
 

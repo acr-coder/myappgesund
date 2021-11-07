@@ -30,14 +30,20 @@ const LoginComponent = ( {goToRegister} ) => {
   }
   
   return (
-    
-        
+    <div className="box">
+      <div className="left-box">
+      <div className="left-box">
+      <Image className="geslogo" src={gelogo} alt="logo" width={80} height={80} /> 
+        <h1 style={{marginLeft:"10px"}} >Gesund AI</h1>
+      </div>
+      </div>
+      <div className="right-box">
       <form onSubmit={handleSubmit}>
       <div className="container">
          
-      <div className="box">
-      <Image className="geslogo" src={gelogo} alt="logo" width={80} height={80} /> 
-      <h1>Login</h1>
+      <div >
+      
+      <h1 style={{textAlign:"center"}} >Login</h1>
         </div>
     
     <hr/>
@@ -58,6 +64,10 @@ const LoginComponent = ( {goToRegister} ) => {
     <p>Dont you have Gesund account? <a onClick={goToRegister} style={{cursor:"pointer"}}>Register</a>.</p>
   </div>
       </form>
+      </div>
+    </div>
+        
+      
       
       
     

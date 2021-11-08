@@ -1,8 +1,9 @@
-* {box-sizing: border-box; background-color: black;}
-.box{
+* {box-sizing: border-box; }
+.mybox{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  background-color: black;
 }
 .left-box{
   display: flex;
@@ -18,7 +19,7 @@
   flex: 70%;
 }
 /* Add padding to containers */
-.container {
+.mycontainer {
   padding: 16px;
   color: white;
   width: 80%;
@@ -74,7 +75,7 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
-  .container{
+  .mycontainer{
     width: 100%;
   }
 }

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+.navbar{
+    background: #0E1124 !important;
+    min-height: 92px;
+}
+
+.nav-link{
+    font-family: Montserrat !important;
+font-style: normal !important;
+font-weight: 500 !important;
+font-size: 15px !important;
+line-height: 24px !important;
+/* identical to box height, or 160% */
+opacity: 0.7;
+display: flex !important;
+align-items: center !important;
+text-align: center !important;
+letter-spacing: 0.02em !important;
+
+/* Gray/20 */
+
+color: #B1B9D1!important;
+margin-left: 10px !important;
+}
+a:hover{
+opacity: 1;
+}
+a:active {
+    background-color: rgb(220, 220, 231);
+  }
+
+.notvisible{
+    display: none;
+}
+.icons{
+    width: 150px;
+    display: flex !important;
+    justify-content: space-between !important;
+    
+}

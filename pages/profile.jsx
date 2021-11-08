@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import nookies from 'nookies';
+import Header from '../components/header'
+import Deployments from '../components/deployments';
 
 const Profile = (props) => {
   const router = useRouter();
@@ -16,12 +18,10 @@ const Profile = (props) => {
   }
 
   return (
-    <div style={{color:"white"}} >
-      <div>Username: {username}</div>
-      <div>Email: {email}</div>
-      <div>Deployment: {deployment ? deployment : ''}</div>
-      <button onClick={logout}>Logout</button>
-    </div>
+    <>
+    <Header logout={logout} props={props} />
+    <Deployments />
+    </>
   )
 }
 

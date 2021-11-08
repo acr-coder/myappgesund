@@ -4,6 +4,7 @@ import axios from 'axios';
 import Image from 'next/image'
 import gelogo from '../assets/image1.png'
 
+
 const RegisterComponent = () => {
   const router = useRouter();
   const [userData, setUserData] = useState({
@@ -36,14 +37,14 @@ const RegisterComponent = () => {
   }
 
   return (
-    <div className="box">
+    <div className="mybox">
       <div className="left-box">
       <Image className="geslogo" src={gelogo} alt="logo" width={80} height={80} /> 
         <h1 style={{marginLeft:"10px"}} >Gesund AI</h1>
       </div>
     <div className="right-box">
     <form onSubmit={handleSubmit}>
-          <div className="container">
+          <div className="mycontainer">
       <div>
        
       <h1 style={{textAlign:"center"}}>Register</h1>
@@ -67,7 +68,7 @@ const RegisterComponent = () => {
     <button type="submit" className="registerbtn">Register</button>
   </div>
 
-  <div className="container signin">
+  <div className="mycontainer signin">
     <p>Already have an account? <a onClick={goToLogin} style={{cursor:"pointer"}}>Sign in</a>.</p>
   </div>
       

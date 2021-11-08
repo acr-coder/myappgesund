@@ -42,12 +42,12 @@ const Header = ({logout, props}) => {
             </li>
             <li className="nav-item">
             
-              <a style={{cursor:"pointer"}} className="nav-link" aria-current="page" onClick={logout} >Logout</a>
+              <a style={{cursor:"pointer"}} className="nav-link user" aria-current="page" onClick={logout} >Logout</a>
               
             </li>
             <li className="nav-item">
             
-              <a className="nav-link" aria-current="page" >{props.user.email}</a>
+              <a  className="nav-link user" aria-current="page" >{props.user.username}</a>
               
             </li>
             

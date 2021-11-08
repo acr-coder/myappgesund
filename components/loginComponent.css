@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: black;
+  height: 100vh;
 }
 .left-box{
   display: flex;

@@ -38,3 +38,9 @@ a:active {
     justify-content: space-between !important;
     
 }
+
+.user{
+    color: red !important;
+    font-size: 15px !important;
+    opacity: 1 !important;
+}

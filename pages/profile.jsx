@@ -20,7 +20,7 @@ const Profile = (props) => {
   return (
     <>
     <Header logout={logout} props={props} />
-    <Deployments />
+    <Deployments props={props}/>
     </>
   )
 }

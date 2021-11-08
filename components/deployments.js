@@ -10,7 +10,7 @@ import up from '../assets/up.svg'
 import dots from '../assets/dots.svg'
 import fail from '../assets/fail.svg'
 
-const Deployments = () => {
+const Deployments = ({props}) => {
     
 
   const [serviceHealthSummary, setServiceHealthSummary] = useState({
@@ -54,7 +54,7 @@ const Deployments = () => {
             <div className="card-body"  style={{ marginBottom: "8px" }}>
               <h5 className="title">Active Deployments</h5>
               <h1>
-                72
+                {props.user.deployment ? props.user.deployment : 0}
               </h1>
               <h5 className="sub" >0 inactive</h5>
             </div>
@@ -65,7 +65,7 @@ const Deployments = () => {
             <div className="card-body">
               <h5 className="title">Active Deployments</h5>
               <h1>
-                1.40M <sup>(-3.4%)</sup>
+                {props.user.activedeployments ? props.user.activedeployments : 0} <sup>(-3.4%)</sup>
               </h1>
               <h5 className="sub" >Last 7 days: <span style={{color:"#fff"}} >64 new</span> <Image src={up} alt="up" /></h5>
             </div>
@@ -84,17 +84,17 @@ const Deployments = () => {
                   colors={["#1ABC9C", "#FFB806", "#F24C42"]}
                   data={[
                     {
-                      label: `${serviceHealthSummary.passing} Passing `,
-                      value: serviceHealthSummary.passing,
+                      label: `${props.user.shspassing ? props.user.shspassing : 0} Passing `,
+                      value: props.user.shspassing ? props.user.shspassing : 0,
                       color: "#9c27b0",
                     },
                     {
                       label: "At Risk",
-                      value: 1,
+                      value: props.user.shsatrisk ? props.user.shsatrisk : 0,
                     },
                     {
                       label: "Failing",
-                      value: 1,
+                      value: props.user.shsfailing ? props.user.shsfailing : 0,
                     },
                   ]}
                 />
@@ -103,19 +103,19 @@ const Deployments = () => {
                     <div className="label-point-passing"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${serviceHealthSummary.passing} Passing`}</h5>
+                    >{`${props.user.shspassing ? props.user.shspassing : 0} Passing`}</h5>
                   </div>
                   <div className="label-box">
                     <div className="label-point-atrisk"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${serviceHealthSummary.atRisk} At Risk`}</h5>
+                    >{`${props.user.shsatrisk ? props.user.shsatrisk : 0} At Risk`}</h5>
                   </div>
                   <div className="label-box">
                     <div className="label-point-failing"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${serviceHealthSummary.failing} Failing`}</h5>
+                    >{`${props.user.shsfailing ? props.user.shsfailing : 0} Failing`}</h5>
                   </div>
                 </div>
               </div>
@@ -136,17 +136,17 @@ const Deployments = () => {
                   colors={["#1ABC9C", "#FFB806", "#F24C42"]}
                   data={[
                     {
-                      label: `${dataDriftSummary.passing} Passing `,
-                      value: dataDriftSummary.passing,
+                      label: `${props.user.ddspassing ? props.user.ddspassing : 0} Passing `,
+                      value: props.user.ddspassing ? props.user.ddspassing : 0,
                       color: "#9c27b0",
                     },
                     {
                       label: "At Risk",
-                      value: 1,
+                      value: props.user.ddsatrisk ? props.user.ddsatrisk : 0,
                     },
                     {
                       label: "Failing",
-                      value: 1,
+                      value: props.user.ddsfailing ? props.user.ddsfailing : 0,
                     },
                   ]}
                 />
@@ -155,19 +155,19 @@ const Deployments = () => {
                     <div className="label-point-passing"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${dataDriftSummary.passing} Passing`}</h5>
+                    >{`${props.user.ddspassing ? props.user.ddspassing : 0} Passing`}</h5>
                   </div>
                   <div className="label-box">
                     <div className="label-point-atrisk"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${dataDriftSummary.atRisk} At Risk`}</h5>
+                    >{`${props.user.ddsatrisk ? props.user.ddsatrisk : 0} At Risk`}</h5>
                   </div>
                   <div className="label-box">
                     <div className="label-point-failing"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${dataDriftSummary.failing} Failing`}</h5>
+                    >{`${props.user.ddsfailing ? props.user.ddsfailing : 0} Failing`}</h5>
                   </div>
                 </div>
               </div>
@@ -187,17 +187,17 @@ const Deployments = () => {
                   colors={["#1ABC9C", "#FFB806", "#F24C42"]}
                   data={[
                     {
-                      label: `${accuracySummary.passing} Passing `,
-                      value: accuracySummary.passing,
+                      label: `${props.user.aspassing ? props.user.aspassing : 0} Passing `,
+                      value: props.user.aspassing ? props.user.aspassing : 0,
                       color: "#9c27b0",
                     },
                     {
                       label: "At Risk",
-                      value: 1,
+                      value: props.user.asatrisk ? props.user.asatrisk : 0,
                     },
                     {
                       label: "Failing",
-                      value: 1,
+                      value: props.user.asfailing ? props.user.asfailing : 0,
                     },
                   ]}
                 />
@@ -206,19 +206,19 @@ const Deployments = () => {
                     <div className="label-point-passing"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${accuracySummary.passing} Passing`}</h5>
+                    >{`${props.user.aspassing ? props.user.aspassing : 0} Passing`}</h5>
                   </div>
                   <div className="label-box">
                     <div className="label-point-atrisk"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${accuracySummary.atRisk} At Risk`}</h5>
+                    >{`${props.user.asatrisk ? props.user.asatrisk : 0} At Risk`}</h5>
                   </div>
                   <div className="label-box">
                     <div className="label-point-failing"></div>
                     <h5
                       style={{ color: "white" }}
-                    >{`${accuracySummary.failing} Failing`}</h5>
+                    >{`${props.user.asfailing ? props.user.asfailing : 0} Failing`}</h5>
                   </div>
                 </div>
               </div>
